@@ -1,0 +1,65 @@
+git init
+
+Açıklama: Yeni bir Git deposu başlatır. Bu komut, belirtilen dizini bir Git deposuna dönüştürür.
+Kullanım: git init
+git clone [repository URL]
+
+Açıklama: Belirtilen uzak depoyu yerel makinenize kopyalar.
+Kullanım: git clone https://github.com/kullanıcı/depoadı.git
+git status
+
+Açıklama: Çalışma dizinindeki dosyaların durumunu gösterir. Hangi dosyaların değiştirildiğini, hangi dosyaların izlenmediğini ve hangilerinin eklenmesi gerektiğini belirtir.
+Kullanım: git status
+git add [dosya_adı]
+
+Açıklama: Belirtilen dosyayı hazırlık alanına (staging area) ekler.
+Kullanım: git add dosya_adı
+Not: Tüm dosyaları eklemek için git add . kullanılabilir.
+git commit -m "[mesaj]"
+
+Açıklama: Hazırlık alanındaki (staged) değişiklikleri bir commit olarak kaydeder. Commit mesajı, yapılan değişiklikleri özetler.
+Kullanım: git commit -m "Yapılan değişiklikleri açıklayan bir mesaj"
+git push [uzak_adı] [dal_adı]
+
+Açıklama: Yerel depodaki commit'leri belirtilen uzak depoya gönderir.
+Kullanım: git push origin main
+git pull [uzak_adı] [dal_adı]
+
+Açıklama: Belirtilen uzak depodaki son değişiklikleri yerel depoya çeker ve birleştirir.
+Kullanım: git pull origin main
+git branch
+
+Açıklama: Mevcut dal (branch) adını gösterir veya yeni bir dal oluşturmak için kullanılır.
+Kullanım: git branch (mevcut dalları listeler) veya git branch yeni_dal (yeni bir dal oluşturur)
+git checkout [dal_adı]
+
+Açıklama: Farklı bir dala geçmek için kullanılır. Aynı zamanda bir branch veya commit'e geçiş yapılabilir.
+Kullanım: git checkout dal_adı
+git merge [dal_adı]
+
+Açıklama: Belirtilen dalı (branch) şu anki dal ile birleştirir.
+Kullanım: git merge feature_branch
+git log
+
+Açıklama: Depodaki commit geçmişini gösterir. Hangi commit'lerin yapıldığını, kim tarafından ve ne zaman yapıldığını belirtir.
+Kullanım: git log
+git remote add [uzak_adı] [URL]
+
+Açıklama: Yeni bir uzak depo ekler. Uzak depo, başka bir yerel depoyu, bir Git sunucusunu veya bir GitHub depo URL'sini gösterebilir.
+Kullanım: git remote add origin https://github.com/kullanıcı/depoadı.git
+git fetch [uzak_adı]
+
+Açıklama: Belirtilen uzak depodan veri indirir, ancak otomatik olarak birleştirme yapmaz.
+Kullanım: git fetch origin
+git reset --hard [commit_hash]
+
+Açıklama: Çalışma dizinini ve hazırlanmış değişiklikleri belirtilen commit'e geri döner.
+Kullanım: git reset --hard a1b2c3d4
+git stash
+
+Açıklama: Çalışma dizinindeki değişiklikleri geçici olarak saklar, böylece temiz bir çalışma dizinine sahip olursunuz.
+Kullanım: git stash
+git stash pop
+
+Açıklama: Saklanan değişiklikleri geri yükler ve saklama listesinden kaldırır.
+Kullanım: git stash pop
